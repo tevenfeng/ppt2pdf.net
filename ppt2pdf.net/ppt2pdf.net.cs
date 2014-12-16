@@ -67,6 +67,7 @@ namespace ppt2pdf.net
             {
                 fileNames = myFileDialog.FileNames;
                 path = System.IO.Path.GetDirectoryName(fileNames[0]);
+                this.button_Convert.Enabled = true;
             }
         }
 
