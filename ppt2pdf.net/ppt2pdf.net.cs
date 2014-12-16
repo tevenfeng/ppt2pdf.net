@@ -72,7 +72,26 @@ namespace ppt2pdf.net
 
         private void button_Convert_Click(object sender, EventArgs e)
         {
+            bool result = true;
+            myPpt2PdfConverter = new ppt2pdfConverter();
 
+            foreach (string file in fileNames)
+            {
+                string fileName = file.Substring(file.LastIndexOf("\\") + 1, file.LastIndexOf(".")-1-file.LastIndexOf("\\"));
+                if (myPpt2PdfConverter.Convert(file, path + "\\" + fileName + ".pdf") != true)
+                {
+                    result = false;
+                }
+            }
+
+            if (result == true)
+            {
+                MessageBox.Show("转换成功！");
+            }
+            else
+            {
+                MessageBox.Show("转换失败，请重试！");
+            }
         }
     }
 }
