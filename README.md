@@ -23,7 +23,7 @@ ppt2pdf.net
        and then compile it and build it. And enjoy! 
  
  
- Copyright 
+ Copyleft 
  --------- 
  
  
