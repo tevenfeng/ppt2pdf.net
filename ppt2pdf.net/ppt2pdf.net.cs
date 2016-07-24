@@ -62,7 +62,7 @@ namespace ppt2pdf.net
         private void button_Explore_Click(object sender, EventArgs e)
         {
             myFileDialog.Multiselect = true;
-            myFileDialog.Filter = "(PPT文件)|*.ppt;*.pptx";
+            myFileDialog.Filter = "(PPT文件)|*.ppt;*.pptx;*.pps;*.ppsx";
             if (myFileDialog.ShowDialog() == DialogResult.OK)
             {
                 fileNames = myFileDialog.FileNames;
